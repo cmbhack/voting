@@ -1,11 +1,11 @@
 <template name='results'>
   <div class="container">
     <h1>Results</h1>
-    <ul>
+    <ol>
       {{#each results}}
         <li>{{getIdeaName}} - ({{count}})</li>
       {{/each}}
-    </ul>
+    </ol>
     <br><br>
     <button type="button" id='update-results' class="btn btn-primary">Update Results</button>
   </div>
