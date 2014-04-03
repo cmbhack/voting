@@ -11,8 +11,18 @@ Meteor.methods({
   },
 
   "addHackers": function(emails) {
+    Authorize();
+
     emails.forEach(function(email) {
       Hackers.upsert({_id: email}, {$set: {updated: new Date()}});
+    });
+  },
+
+  "addIdeas": function(ideas) {
+    Authorize();
+    
+    ideas.forEach(function(idea) {
+      Ideas.insert({name: idea});
     });
   },
 
@@ -34,7 +44,7 @@ Meteor.methods({
     }
 
     sortedVoteCounts.sort(function(a, b) {
-      return a.counts - b.counts;
+      return b.count - a.count;
     });
 
     return sortedVoteCounts;

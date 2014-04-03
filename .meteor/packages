@@ -6,5 +6,5 @@
 standard-app-packages
 iron-router
 bootstrap-3
-autopublish
-insecure
+fast-render
+accounts-password

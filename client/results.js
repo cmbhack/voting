@@ -13,12 +13,12 @@ Template.results.helpers({
 
 Template.results.events({
   "click #update-results": function() {
-    console.log('==============');
     Meteor.call('calcResults', function(err, results) {
       if(err) {
         alert(err.reason);
       } else {
         Session.set('results', results);
+        alert('Results Updated!');
       }
     });
   }
