@@ -9,5 +9,23 @@ Meteor.publish("hackers", function() {
 Hackers.allow({
   insert: function() {
     return Authorize();
+  },
+  update: function() {
+    return Authorize();
+  }, 
+  remove: function() {
+    return Authorize();
+  }
+});
+
+Ideas.allow({
+  insert: function() {
+    return Authorize();
+  },
+  update: function() {
+    return Authorize();
+  }, 
+  remove: function() {
+    return Authorize();
   }
 });
