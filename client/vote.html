@@ -1,0 +1,34 @@
+<template name='vote'>
+  <div class="container">
+    <h1> CMBHack.JS Voting for Ideas </h1>
+    Your Email: <input id="email" type='text' />
+    <br><br>
+
+    Vote 1:
+    <select id='vote1'>
+      {{#each ideas}}
+        <option value='{{_id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+    <br><br>
+
+    Vote 2:
+    <select id='vote2'>
+      {{#each ideas}}
+        <option value='{{_id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+    <br><br>
+
+    Vote 3:
+    <select id='vote3'>
+      {{#each ideas}}
+        <option value='{{_id}}'>{{name}}</option>
+      {{/each}}
+    </select>
+    <br><br>
+
+    <button type='button' id='vote-now' class="btn btn-primary">Vote</button>
+
+  </div>
+</template>
